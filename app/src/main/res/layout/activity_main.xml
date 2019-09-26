@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/background">
+
+    <include
+        layout="@layout/header"
+        android:id="@+id/header"
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/menu"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        tools:layout_editor_absoluteX="42dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/feeling"
+                android:textAlignment="center"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/smile"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/smile3" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20sp"
+                android:max="100"
+                android:min="0"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:progress="3" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/wgo"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editLifeEvents"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="top"
+                android:inputType="text|textMultiLine" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/mentalHealth"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editFuturePlans"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="30sp"
+                android:gravity="top"
+                android:inputType="text|textMultiLine" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30sp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/breatheButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/deepBreaths" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/countdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_weight="1"
+                    android:text="@string/timer"
+                    android:textAlignment="center"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40sp"
+                android:layout_weight="1"
+                android:text="@string/save" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        layout="@layout/menu"
+        android:id="@+id/menu"/>
+
+</android.support.constraint.ConstraintLayout>
